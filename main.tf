@@ -31,3 +31,20 @@ module "kevin_lol_service" {
     "cloudbuild.googleapis.com",
   ]
 }
+
+module "kevin_web_app" {
+  source  = "terraform-google-modules/project-factory/google"
+  version = "~> 18.3"
+
+  folder_id       = google_folder.default.id
+  billing_account = var.billing_account_id
+  name            = "kevin-web-app"
+
+  activate_apis = [
+    "compute.googleapis.com",
+    "secretmanager.googleapis.com",
+    "cloudrun.googleapis.com",
+    "artifactregistry.googleapis.com",
+    "cloudbuild.googleapis.com",
+  ]
+}
