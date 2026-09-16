@@ -42,7 +42,6 @@ module "kevin_web_app" {
 
   activate_apis = [
     "compute.googleapis.com",
-    "secretmanager.googleapis.com",
     "cloudrun.googleapis.com",
     "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
