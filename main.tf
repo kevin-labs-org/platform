@@ -18,9 +18,10 @@ module "kevin_lol_service" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 18.3"
 
-  folder_id       = google_folder.default.id
-  billing_account = var.billing_account_id
-  name            = "kevin-lol-service"
+  folder_id         = google_folder.default.id
+  random_project_id = true
+  billing_account   = var.billing_account_id
+  name              = "lol-service"
 
   activate_apis = [
     "compute.googleapis.com",
@@ -36,9 +37,10 @@ module "kevin_web_app" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 18.3"
 
-  folder_id       = google_folder.default.id
-  billing_account = var.billing_account_id
-  name            = "kevin-web-app"
+  folder_id         = google_folder.default.id
+  random_project_id = true
+  billing_account   = var.billing_account_id
+  name              = "web-app"
 
   activate_apis = [
     "compute.googleapis.com",
