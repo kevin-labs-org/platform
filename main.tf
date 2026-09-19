@@ -37,7 +37,6 @@ module "kevin_web_app" {
   source  = "terraform-google-modules/project-factory/google"
   version = "~> 18.3"
 
-
   folder_id         = google_folder.default.id
   random_project_id = true
   billing_account   = var.billing_account_id
