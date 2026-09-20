@@ -25,9 +25,9 @@ module "kevin_lol_service" {
 
   activate_apis = [
     "compute.googleapis.com",
-    "cloudsql.googleapis.com",
+    "sqladmin.googleapis.com",
     "secretmanager.googleapis.com",
-    "cloudrun.googleapis.com",
+    "run.googleapis.com",
     "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
   ]
@@ -44,7 +44,7 @@ module "kevin_web_app" {
 
   activate_apis = [
     "compute.googleapis.com",
-    "cloudrun.googleapis.com",
+    "run.googleapis.com",
     "artifactregistry.googleapis.com",
     "cloudbuild.googleapis.com",
   ]
